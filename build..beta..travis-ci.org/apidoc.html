@@ -46,2117 +46,2118 @@
     font-weight: bold;
 }
 </style>
-<h1>api-documentation for
+<h1>api documentation for
     <a
-        
+
         href="http://pm2.keymetrics.io/"
-        
+
     >pm2 (v2.4.2)</a>
 </h1>
+<h4>Production process manager for Node.JS applications with a built-in load balancer.</h4>
 <div class="apidocSectionDiv"><a
     href="#apidoc.tableOfContents"
     id="apidoc.tableOfContents"
 ><h1>table of contents</h1></a><ol>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2">module pm2</a><ol>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">pm2.</span>daemon_mode</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">pm2.</span>gl_is_km_linked</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon">
             function <span class="apidocSignatureSpan">pm2.</span>Daemon
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom">
             function <span class="apidocSignatureSpan">pm2.</span>custom
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Client</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Client.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Common</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Configuration</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Daemon.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>God</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Satan</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>Utility</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>_conf</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>completion</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>custom.prototype</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>gl_interact_infos</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>machine_name</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>public_key</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>secret_key</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.</span>start_timer</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">pm2.</span>cwd</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">pm2.</span>pm2_home</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Client">module pm2.Client</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.Client">
             function <span class="apidocSignatureSpan">pm2.</span>Client
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Client.prototype">module pm2.Client.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.close">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>close
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.disconnectBus">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>disconnectBus
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.disconnectRPC">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>disconnectRPC
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.executeRemote">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>executeRemote
             <span class="apidocSignatureSpan">(method, app_conf, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.getAllModulesId">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getAllModulesId
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.getAllProcess">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getAllProcess
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.getAllProcessId">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getAllProcessId
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.getExposedMethods">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getExposedMethods
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.getProcessByName">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getProcessByName
             <span class="apidocSignatureSpan">(name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.getProcessIdByName">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getProcessIdByName
             <span class="apidocSignatureSpan">(name, force_all, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.initFileStructure">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>initFileStructure
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.killDaemon">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>killDaemon
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.launchBus">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>launchBus
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.launchDaemon">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>launchDaemon
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.launchRPC">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>launchRPC
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.notifyGod">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>notifyGod
             <span class="apidocSignatureSpan">(action_name, id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.pingDaemon">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>pingDaemon
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.start">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>start
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.startWatch">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>startWatch
             <span class="apidocSignatureSpan">(method, env, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.stopWatch">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>stopWatch
             <span class="apidocSignatureSpan">(method, env, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Client.prototype.toggleWatch">
             function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>toggleWatch
             <span class="apidocSignatureSpan">(method, env, fn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Common">module pm2.Common</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.clone">
             function <span class="apidocSignatureSpan">pm2.Common.</span>clone
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.deepCopy">
             function <span class="apidocSignatureSpan">pm2.Common.</span>deepCopy
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.extend">
             function <span class="apidocSignatureSpan">pm2.Common.</span>extend
             <span class="apidocSignatureSpan">(destination, source)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.isConfigFile">
             function <span class="apidocSignatureSpan">pm2.Common.</span>isConfigFile
             <span class="apidocSignatureSpan">(filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.mergeEnvironmentVariables">
             function <span class="apidocSignatureSpan">pm2.Common.</span>mergeEnvironmentVariables
             <span class="apidocSignatureSpan">(app_env, env_name, deploy_conf)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.parseConfig">
             function <span class="apidocSignatureSpan">pm2.Common.</span>parseConfig
             <span class="apidocSignatureSpan">(confObj, filename)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.prepareAppConf">
             function <span class="apidocSignatureSpan">pm2.Common.</span>prepareAppConf
             <span class="apidocSignatureSpan">(opts, app)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.printError">
             function <span class="apidocSignatureSpan">pm2.Common.</span>printError
             <span class="apidocSignatureSpan">(msg)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.printOut">
             function <span class="apidocSignatureSpan">pm2.Common.</span>printOut
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.resolveAppAttributes">
             function <span class="apidocSignatureSpan">pm2.Common.</span>resolveAppAttributes
             <span class="apidocSignatureSpan">(opts, legacy_app)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.retErr">
             function <span class="apidocSignatureSpan">pm2.Common.</span>retErr
             <span class="apidocSignatureSpan">(e)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.safeExtend">
             function <span class="apidocSignatureSpan">pm2.Common.</span>safeExtend
             <span class="apidocSignatureSpan">(origin, add)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.serialize">
             function <span class="apidocSignatureSpan">pm2.Common.</span>serialize
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Common.verifyConfs">
             function <span class="apidocSignatureSpan">pm2.Common.</span>verifyConfs
             <span class="apidocSignatureSpan">(appConfs)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.Common.</span>sink</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Configuration">module pm2.Configuration</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.get">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>get
             <span class="apidocSignatureSpan">(key, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.getAll">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>getAll
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.getAllSync">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>getAllSync
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.getSync">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>getSync
             <span class="apidocSignatureSpan">(key)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.multiset">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>multiset
             <span class="apidocSignatureSpan">(serial, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.set">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>set
             <span class="apidocSignatureSpan">(key, value, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.setSync">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>setSync
             <span class="apidocSignatureSpan">(key, value)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.unset">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>unset
             <span class="apidocSignatureSpan">(key, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Configuration.unsetSync">
             function <span class="apidocSignatureSpan">pm2.Configuration.</span>unsetSync
             <span class="apidocSignatureSpan">(key)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Daemon">module pm2.Daemon</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.Daemon">
             function <span class="apidocSignatureSpan">pm2.</span>Daemon
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Daemon.prototype">module pm2.Daemon.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.close">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>close
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.gracefullExit">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>gracefullExit
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.handleSignals">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>handleSignals
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.innerStart">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>innerStart
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.sendReady">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>sendReady
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.start">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>start
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Daemon.prototype.startLogic">
             function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>startLogic
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.God">module pm2.God</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.checkProcess">
             function <span class="apidocSignatureSpan">pm2.God.</span>checkProcess
             <span class="apidocSignatureSpan">(pid)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.deleteProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>deleteProcessId
             <span class="apidocSignatureSpan">(id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.dumpProcessList">
             function <span class="apidocSignatureSpan">pm2.God.</span>dumpProcessList
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.duplicateProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>duplicateProcessId
             <span class="apidocSignatureSpan">(id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.executeApp">
             function <span class="apidocSignatureSpan">pm2.God.</span>executeApp
             <span class="apidocSignatureSpan">(env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.finalizeProcedure">
             function <span class="apidocSignatureSpan">pm2.God.</span>finalizeProcedure
             <span class="apidocSignatureSpan">(proc)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.findByName">
             function <span class="apidocSignatureSpan">pm2.God.</span>findByName
             <span class="apidocSignatureSpan">(name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.findProcessById">
             function <span class="apidocSignatureSpan">pm2.God.</span>findProcessById
             <span class="apidocSignatureSpan">(id)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.forceGc">
             function <span class="apidocSignatureSpan">pm2.God.</span>forceGc
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.forkMode">
             function <span class="apidocSignatureSpan">pm2.God.</span>forkMode
             <span class="apidocSignatureSpan">(pm2_env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getFormatedProcess">
             function <span class="apidocSignatureSpan">pm2.God.</span>getFormatedProcess
             <span class="apidocSignatureSpan">(id)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getFormatedProcesses">
             function <span class="apidocSignatureSpan">pm2.God.</span>getFormatedProcesses
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getMonitorData">
             function <span class="apidocSignatureSpan">pm2.God.</span>getMonitorData
             <span class="apidocSignatureSpan">(env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getNewId">
             function <span class="apidocSignatureSpan">pm2.God.</span>getNewId
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getProcesses">
             function <span class="apidocSignatureSpan">pm2.God.</span>getProcesses
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getSystemData">
             function <span class="apidocSignatureSpan">pm2.God.</span>getSystemData
             <span class="apidocSignatureSpan">(env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.getVersion">
             function <span class="apidocSignatureSpan">pm2.God.</span>getVersion
             <span class="apidocSignatureSpan">(env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.handleExit">
             function <span class="apidocSignatureSpan">pm2.God.</span>handleExit
             <span class="apidocSignatureSpan">(clu, exit_code, kill_signal)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.killProcess">
             function <span class="apidocSignatureSpan">pm2.God.</span>killProcess
             <span class="apidocSignatureSpan">(pid, pm2_env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.logAndGenerateError">
             function <span class="apidocSignatureSpan">pm2.God.</span>logAndGenerateError
             <span class="apidocSignatureSpan">(err)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.msgProcess">
             function <span class="apidocSignatureSpan">pm2.God.</span>msgProcess
             <span class="apidocSignatureSpan">(cmd, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.nodeApp">
             function <span class="apidocSignatureSpan">pm2.God.</span>nodeApp
             <span class="apidocSignatureSpan">(env_copy, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.notify">
             function <span class="apidocSignatureSpan">pm2.God.</span>notify
             <span class="apidocSignatureSpan">(action_name, data, manually)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.notifyByProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>notifyByProcessId
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.notifyKillPM2">
             function <span class="apidocSignatureSpan">pm2.God.</span>notifyKillPM2
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.ping">
             function <span class="apidocSignatureSpan">pm2.God.</span>ping
             <span class="apidocSignatureSpan">(env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.prepare">
             function <span class="apidocSignatureSpan">pm2.God.</span>prepare
             <span class="apidocSignatureSpan">(env, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.processIsDead">
             function <span class="apidocSignatureSpan">pm2.God.</span>processIsDead
             <span class="apidocSignatureSpan">(pid, pm2_env, cb, sigkill)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.reloadLogs">
             function <span class="apidocSignatureSpan">pm2.God.</span>reloadLogs
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.reloadProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>reloadProcessId
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.resetMetaProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>resetMetaProcessId
             <span class="apidocSignatureSpan">(id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.resetState">
             function <span class="apidocSignatureSpan">pm2.God.</span>resetState
             <span class="apidocSignatureSpan">(pm2_env)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.restartProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>restartProcessId
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.restartProcessName">
             function <span class="apidocSignatureSpan">pm2.God.</span>restartProcessName
             <span class="apidocSignatureSpan">(name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.sendDataToProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>sendDataToProcessId
             <span class="apidocSignatureSpan">(packet, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.sendSignalToProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>sendSignalToProcessId
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.sendSignalToProcessName">
             function <span class="apidocSignatureSpan">pm2.God.</span>sendSignalToProcessName
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.softReloadProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>softReloadProcessId
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.startProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>startProcessId
             <span class="apidocSignatureSpan">(id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.startWatch">
             function <span class="apidocSignatureSpan">pm2.God.</span>startWatch
             <span class="apidocSignatureSpan">(method, value, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.stopProcessId">
             function <span class="apidocSignatureSpan">pm2.God.</span>stopProcessId
             <span class="apidocSignatureSpan">(id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.stopWatch">
             function <span class="apidocSignatureSpan">pm2.God.</span>stopWatch
             <span class="apidocSignatureSpan">(method, value, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.God.toggleWatch">
             function <span class="apidocSignatureSpan">pm2.God.</span>toggleWatch
             <span class="apidocSignatureSpan">(method, value, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">pm2.God.</span>next_id</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.God.</span>Worker</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.God.</span>bus</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.God.</span>clusters_db</span>
-            
+
         </li>
-        
+
         <li>
-            
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2.God.</span>watch</span>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Satan">module pm2.Satan</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.disconnectBus">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>disconnectBus
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.disconnectRPC">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>disconnectRPC
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.executeRemote">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>executeRemote
             <span class="apidocSignatureSpan">(method, env, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.getExposedMethods">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>getExposedMethods
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.killDaemon">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>killDaemon
             <span class="apidocSignatureSpan">(fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.launchBus">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>launchBus
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.launchDaemon">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>launchDaemon
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.launchRPC">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>launchRPC
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.notifyGod">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>notifyGod
             <span class="apidocSignatureSpan">(action_name, id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.pingDaemon">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>pingDaemon
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.printOut">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>printOut
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.processStateHandler">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>processStateHandler
             <span class="apidocSignatureSpan">(God)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.remoteWrapper">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>remoteWrapper
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.restartWatch">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>restartWatch
             <span class="apidocSignatureSpan">(method, env, fn)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.start">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>start
             <span class="apidocSignatureSpan">(noDaemonMode, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Satan.stopWatch">
             function <span class="apidocSignatureSpan">pm2.Satan.</span>stopWatch
             <span class="apidocSignatureSpan">(method, env, fn)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.Utility">module pm2.Utility</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.clone">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>clone
             <span class="apidocSignatureSpan">(obj)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.extend">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>extend
             <span class="apidocSignatureSpan">(destination, source)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.extendExtraConfig">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>extendExtraConfig
             <span class="apidocSignatureSpan">(proc, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.formatCLU">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>formatCLU
             <span class="apidocSignatureSpan">(process)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.getDate">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>getDate
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.overrideConsole">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>overrideConsole
             <span class="apidocSignatureSpan">(bus)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.packageNameToModuleName">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>packageNameToModuleName
             <span class="apidocSignatureSpan">(package_name)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.startLogging">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>startLogging
             <span class="apidocSignatureSpan">(stds, callback)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.Utility.whichFileExists">
             function <span class="apidocSignatureSpan">pm2.Utility.</span>whichFileExists
             <span class="apidocSignatureSpan">(file_arr)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.completion">module pm2.completion</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.completion.complete">
             function <span class="apidocSignatureSpan">pm2.completion.</span>complete
             <span class="apidocSignatureSpan">(name, completer, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.completion.isComplete">
             function <span class="apidocSignatureSpan">pm2.completion.</span>isComplete
             <span class="apidocSignatureSpan">()</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.completion.log">
             function <span class="apidocSignatureSpan">pm2.completion.</span>log
             <span class="apidocSignatureSpan">(arr, o, prefix)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.completion.parseOut">
             function <span class="apidocSignatureSpan">pm2.completion.</span>parseOut
             <span class="apidocSignatureSpan">(str)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.completion.parseTasks">
             function <span class="apidocSignatureSpan">pm2.completion.</span>parseTasks
             <span class="apidocSignatureSpan">(str, prefix, reg)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.custom">module pm2.custom</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.custom">
             function <span class="apidocSignatureSpan">pm2.</span>custom
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
     <li class="apidocModuleLi"><a href="#apidoc.module.pm2.custom.prototype">module pm2.custom.prototype</a><ol>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._handleAttributeUpdate">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_handleAttributeUpdate
             <span class="apidocSignatureSpan">(opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._operate">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_operate
             <span class="apidocSignatureSpan">(action_name, process_name, envs, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._pre_interact">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_pre_interact
             <span class="apidocSignatureSpan">(cmd, public_key, machine, info_node)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._pull">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_pull
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._pullCommitId">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_pullCommitId
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._startJson">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_startJson
             <span class="apidocSignatureSpan">(file, opts, action, pipe, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype._startScript">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_startScript
             <span class="apidocSignatureSpan">(script, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.actionFromJson">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>actionFromJson
             <span class="apidocSignatureSpan">(action, file, opts, jsonVia, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.backward">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>backward
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.close">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>close
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.conf">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>conf
             <span class="apidocSignatureSpan">(key, value, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.connect">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>connect
             <span class="apidocSignatureSpan">(noDaemon, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.dashboard">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>dashboard
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.deepUpdate">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>deepUpdate
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.delete">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>delete
             <span class="apidocSignatureSpan">(process_name, jsonVia, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.deleteModule">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>deleteModule
             <span class="apidocSignatureSpan">(module_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.deploy">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>deploy
             <span class="apidocSignatureSpan">(file, commands, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.describe">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>describe
             <span class="apidocSignatureSpan">(pm2_id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.destroy">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>destroy
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.disconnect">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>disconnect
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.dockerMode">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>dockerMode
             <span class="apidocSignatureSpan">(script, opts, mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.dump">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>dump
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.exitCli">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>exitCli
             <span class="apidocSignatureSpan">(code)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.flush">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>flush
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.forward">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>forward
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.generateDockerfile">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>generateDockerfile
             <span class="apidocSignatureSpan">(script, opts)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.generateModuleSample">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>generateModuleSample
             <span class="apidocSignatureSpan">(app_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.generateSample">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>generateSample
             <span class="apidocSignatureSpan">(mode)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.get">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>get
             <span class="apidocSignatureSpan">(key, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.getProcessIdByName">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>getProcessIdByName
             <span class="apidocSignatureSpan">(name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.getVersion">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>getVersion
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.gracefulReload">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>gracefulReload
             <span class="apidocSignatureSpan">(process_name, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.install">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>install
             <span class="apidocSignatureSpan">(module_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.interact">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>interact
             <span class="apidocSignatureSpan">(secret_key, public_key, machine_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.interactInfos">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>interactInfos
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.jlist">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>jlist
             <span class="apidocSignatureSpan">(debug)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.kill">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>kill
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.killAllModules">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>killAllModules
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.killDaemon">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>killDaemon
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.killInteract">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>killInteract
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.launchBus">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>launchBus
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.launchModules">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>launchModules
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.list">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>list
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.logrotate">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>logrotate
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.monit">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>monit
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.msgProcess">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>msgProcess
             <span class="apidocSignatureSpan">(opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.multiset">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>multiset
             <span class="apidocSignatureSpan">(serial, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.ping">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>ping
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.printLogs">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>printLogs
             <span class="apidocSignatureSpan">(id, lines, raw, timestamp, exclusive)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.profilePM2">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>profilePM2
             <span class="apidocSignatureSpan">(command, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.publish">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>publish
             <span class="apidocSignatureSpan">(module_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.pullAndGracefulReload">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullAndGracefulReload
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.pullAndReload">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullAndReload
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.pullAndRestart">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullAndRestart
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.pullCommitId">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullCommitId
             <span class="apidocSignatureSpan">(process_name, commit_id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.reload">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>reload
             <span class="apidocSignatureSpan">(process_name, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.reloadLogs">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>reloadLogs
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.remote">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>remote
             <span class="apidocSignatureSpan">(command, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.remoteV2">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>remoteV2
             <span class="apidocSignatureSpan">(command, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.reset">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>reset
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.restart">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>restart
             <span class="apidocSignatureSpan">(cmd, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.resurrect">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>resurrect
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.scale">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>scale
             <span class="apidocSignatureSpan">(app_name, number, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.sendDataToProcessId">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>sendDataToProcessId
             <span class="apidocSignatureSpan">(proc_id, packet, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.sendSignalToProcessId">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>sendSignalToProcessId
             <span class="apidocSignatureSpan">(signal, process_id, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.sendSignalToProcessName">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>sendSignalToProcessName
             <span class="apidocSignatureSpan">(signal, process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.serve">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>serve
             <span class="apidocSignatureSpan">(target_path, port, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.set">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>set
             <span class="apidocSignatureSpan">(key, value, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.snapshotPM2">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>snapshotPM2
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.speedList">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>speedList
             <span class="apidocSignatureSpan">(code)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.start">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>start
             <span class="apidocSignatureSpan">(cmd, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.startup">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>startup
             <span class="apidocSignatureSpan">(platform, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.stop">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>stop
             <span class="apidocSignatureSpan">(process_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.streamLogs">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>streamLogs
             <span class="apidocSignatureSpan">(id, lines, raw, timestamp, exclusive)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.trigger">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>trigger
             <span class="apidocSignatureSpan">(pm_id, action_name, params, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.uninstall">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>uninstall
             <span class="apidocSignatureSpan">(module_name, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.uninstallStartup">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>uninstallStartup
             <span class="apidocSignatureSpan">(platform, opts, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.unset">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>unset
             <span class="apidocSignatureSpan">(key, cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.update">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>update
             <span class="apidocSignatureSpan">(cb)</span>
             </a>
-            
+
         </li>
-        
+
         <li>
-            
+
             <a class="apidocElementLiA" href="#apidoc.element.pm2.custom.prototype.web">
             function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>web
             <span class="apidocSignatureSpan">(port, cb)</span>
             </a>
-            
+
         </li>
-        
+
     </ol></li>
-    
+
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2" id="apidoc.module.pm2">module pm2</a></h1>
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon" id="apidoc.element.pm2.Daemon">
         function <span class="apidocSignatureSpan">pm2.</span>Daemon
@@ -2177,9 +2178,9 @@
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom" id="apidoc.element.pm2.custom">
         function <span class="apidocSignatureSpan">pm2.</span>custom
@@ -2276,8 +2277,8 @@ commander.version(pkg.version)
   .usage(&#x27;[cmd] app&#x27;);
 
 var pm2 = new PM2.<span class="apidocCodeKeywordSpan">custom</span>({
-  pm2_home : path.join(os.homedir ? os.homedir() : (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE), &#x27;\
-.pm2-dev&#x27;)
+  pm2_home : path.join(os.homedir ? os.homedir() : (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE), &#x27;.
+pm2-dev&#x27;)
 });
 
 pm2.connect(function() {
@@ -2285,50 +2286,50 @@ pm2.connect(function() {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Client" id="apidoc.module.pm2.Client">module pm2.Client</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.Client" id="apidoc.element.pm2.Client.Client">
         function <span class="apidocSignatureSpan">pm2.</span>Client
@@ -2378,14 +2379,14 @@ client.sock.once(&#x27;reconnect attempt&#x27;, function() {
   process.nextTick(function() {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Client.prototype" id="apidoc.module.pm2.Client.prototype">module pm2.Client.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.close" id="apidoc.element.pm2.Client.prototype.close">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>close
@@ -2421,9 +2422,9 @@ client.sock.once(&#x27;reconnect attempt&#x27;, function() {
 client.sock.once(&#x27;connect&#x27;, function() {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.disconnectBus" id="apidoc.element.pm2.Client.prototype.disconnectBus">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>disconnectBus
@@ -2474,9 +2475,9 @@ client.sock.once(&#x27;connect&#x27;, function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.disconnectRPC" id="apidoc.element.pm2.Client.prototype.disconnectRPC">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>disconnectRPC
@@ -2545,9 +2546,9 @@ process.once(&#x27;SIGQUIT&#x27;, function() {
   debug(&#x27;Received SIGQUIT&#x27;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.executeRemote" id="apidoc.element.pm2.Client.prototype.executeRemote">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>executeRemote
@@ -2609,9 +2610,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.getAllModulesId" id="apidoc.element.pm2.Client.prototype.getAllModulesId">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getAllModulesId
@@ -2638,9 +2639,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.getAllProcess" id="apidoc.element.pm2.Client.prototype.getAllProcess">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getAllProcess
@@ -2666,9 +2667,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.getAllProcessId" id="apidoc.element.pm2.Client.prototype.getAllProcessId">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getAllProcessId
@@ -2695,9 +2696,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.getExposedMethods" id="apidoc.element.pm2.Client.prototype.getExposedMethods">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getExposedMethods
@@ -2710,9 +2711,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.getProcessByName" id="apidoc.element.pm2.Client.prototype.getProcessByName">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getProcessByName
@@ -2741,9 +2742,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.getProcessIdByName" id="apidoc.element.pm2.Client.prototype.getProcessIdByName">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>getProcessIdByName
@@ -2782,9 +2783,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.initFileStructure" id="apidoc.element.pm2.Client.prototype.initFileStructure">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>initFileStructure
@@ -2854,9 +2855,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.killDaemon" id="apidoc.element.pm2.Client.prototype.killDaemon">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>killDaemon
@@ -2903,9 +2904,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.launchBus" id="apidoc.element.pm2.Client.prototype.launchBus">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>launchBus
@@ -2940,9 +2941,9 @@ setTimeout(function() {
   });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.launchDaemon" id="apidoc.element.pm2.Client.prototype.launchDaemon">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>launchDaemon
@@ -3046,9 +3047,9 @@ that.<span class="apidocCodeKeywordSpan">launchDaemon</span>(function(err, child
     return cb(null, {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.launchRPC" id="apidoc.element.pm2.Client.prototype.launchRPC">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>launchRPC
@@ -3098,9 +3099,9 @@ this.pingDaemon(function(daemonAlive) {
       });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.notifyGod" id="apidoc.element.pm2.Client.prototype.notifyGod">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>notifyGod
@@ -3120,9 +3121,9 @@ this.pingDaemon(function(daemonAlive) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.pingDaemon" id="apidoc.element.pm2.Client.prototype.pingDaemon">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>pingDaemon
@@ -3172,9 +3173,9 @@ this.<span class="apidocCodeKeywordSpan">pingDaemon</span>(function(daemonAlive)
         pub_socket_file  : that.pub_socket_file,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.start" id="apidoc.element.pm2.Client.prototype.start">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>start
@@ -3272,9 +3273,9 @@ if (!this.client || !this.client.call) {
     return self.client.call(method, app_conf, fn);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.startWatch" id="apidoc.element.pm2.Client.prototype.startWatch">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>startWatch
@@ -3290,9 +3291,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.stopWatch" id="apidoc.element.pm2.Client.prototype.stopWatch">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>stopWatch
@@ -3324,9 +3325,9 @@ else if (method.indexOf(&#x27;delete&#x27;) !== -1) {
 else if (method.indexOf(&#x27;kill&#x27;) !== -1) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Client.prototype.toggleWatch" id="apidoc.element.pm2.Client.prototype.toggleWatch">
         function <span class="apidocSignatureSpan">pm2.Client.prototype.</span>toggleWatch
@@ -3358,14 +3359,14 @@ if (!this.client || !this.client.call) {
         return fn(error);
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Common" id="apidoc.module.pm2.Common">module pm2.Common</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.clone" id="apidoc.element.pm2.Common.clone">
         function <span class="apidocSignatureSpan">pm2.Common.</span>clone
@@ -3385,7 +3386,7 @@ if (!this.client || !this.client.call) {
       God.clusters_db[msg.process.pm_id].pm2_env.name = msg.data.name;
 
     Object.keys(msg.data).forEach(function(conf_key) {
-      God.clusters_db[msg.process.pm_id].pm2_env.axm_options[conf_key] = Utility.<span class="apidocCodeKeywordSpan">clone</span\
+      God.clusters_db[msg.process.pm_id].pm2_env.axm_options[conf_key] = Utility.<span class="apidocCodeKeywordSpan">clone</span
 >(msg.data[conf_key]);
     });
   } catch(e) {
@@ -3395,9 +3396,9 @@ if (!this.client || !this.client.call) {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.deepCopy" id="apidoc.element.pm2.Common.deepCopy">
         function <span class="apidocSignatureSpan">pm2.Common.</span>deepCopy
@@ -3411,9 +3412,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.extend" id="apidoc.element.pm2.Common.extend">
         function <span class="apidocSignatureSpan">pm2.Common.</span>extend
@@ -3449,9 +3450,9 @@ formatCLU : function(process) {
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.isConfigFile" id="apidoc.element.pm2.Common.isConfigFile">
         function <span class="apidocSignatureSpan">pm2.Common.</span>isConfigFile
@@ -3472,9 +3473,9 @@ formatCLU : function(process) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.mergeEnvironmentVariables" id="apidoc.element.pm2.Common.mergeEnvironmentVariables">
         function <span class="apidocSignatureSpan">pm2.Common.</span>mergeEnvironmentVariables
@@ -3529,9 +3530,9 @@ formatCLU : function(process) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.parseConfig" id="apidoc.element.pm2.Common.parseConfig">
         function <span class="apidocSignatureSpan">pm2.Common.</span>parseConfig
@@ -3570,9 +3571,9 @@ formatCLU : function(process) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.prepareAppConf" id="apidoc.element.pm2.Common.prepareAppConf">
         function <span class="apidocSignatureSpan">pm2.Common.</span>prepareAppConf
@@ -3735,9 +3736,9 @@ Common.resolveAppAttributes = function(opts, legacy_app) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.printError" id="apidoc.element.pm2.Common.printError">
         function <span class="apidocSignatureSpan">pm2.Common.</span>printError
@@ -3769,9 +3770,9 @@ that.launchDaemon(function(err, child) {
       new_pm2_instance : true,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.printOut" id="apidoc.element.pm2.Common.printOut">
         function <span class="apidocSignatureSpan">pm2.Common.</span>printOut
@@ -3801,9 +3802,9 @@ that.launchDaemon(function(err, child) {
       pm2_home         : that.pm2_home
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.resolveAppAttributes" id="apidoc.element.pm2.Common.resolveAppAttributes">
         function <span class="apidocSignatureSpan">pm2.Common.</span>resolveAppAttributes
@@ -3823,9 +3824,9 @@ that.launchDaemon(function(err, child) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.retErr" id="apidoc.element.pm2.Common.retErr">
         function <span class="apidocSignatureSpan">pm2.Common.</span>retErr
@@ -3842,9 +3843,9 @@ that.launchDaemon(function(err, child) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.safeExtend" id="apidoc.element.pm2.Common.safeExtend">
         function <span class="apidocSignatureSpan">pm2.Common.</span>safeExtend
@@ -3856,11 +3857,11 @@ that.launchDaemon(function(err, child) {
   if (!add || typeof add != &#x27;object&#x27;) return origin;
 
   //Ignore PM2&#x27;s set environment variables from the nested env
-  var keysToIgnore = [&#x27;name&#x27;, &#x27;exec_mode&#x27;, &#x27;env&#x27;, &#x27;args&#x27;, &#x27;pm_cwd&#x27;, &#x27;exec_interpreter&#x27;, &#x27;pm_exec_path&#x27;, &#x27;node_args&#x27;, &#x27;pm_out_log\
-_path&#x27;, &#x27;pm_err_log_path&#x27;, &#x27;pm_pid_path&#x27;, &#x27;pm_id&#x27;, &#x27;status&#x27;, &#x27;pm_uptime&#x27;, &#x27;created_at&#x27;, &#x27;unstable_restarts&#x27;, &#x27;restart_time&#x27;, &#x27;ax\
-m_actions&#x27;, &#x27;pmx_module&#x27;, &#x27;command&#x27;, &#x27;watch&#x27;, &#x27;versioning&#x27;, &#x27;vizion_runing&#x27;, &#x27;MODULE_DEBUG&#x27;, &#x27;pmx&#x27;, &#x27;axm_options&#x27;, &#x27;created_at&#x27;,\
- &#x27;watch&#x27;, &#x27;vizion&#x27;, &#x27;axm_dynamic&#x27;, &#x27;axm_monitor&#x27;, &#x27;instances&#x27;, &#x27;automation&#x27;, &#x27;autorestart&#x27;, &#x27;node_args&#x27;, &#x27;unstable_restart&#x27;, &#x27;tr\
-eekill&#x27;, &#x27;exit_code&#x27;];
+  var keysToIgnore = [&#x27;name&#x27;, &#x27;exec_mode&#x27;, &#x27;env&#x27;, &#x27;args&#x27;, &#x27;pm_cwd&#x27;, &#x27;exec_interpreter&#x27;, &#x27;pm_exec_path&#x27;, &#x27;node_args&#x27;, &#x27;pm_out_log_path
+&#x27;, &#x27;pm_err_log_path&#x27;, &#x27;pm_pid_path&#x27;, &#x27;pm_id&#x27;, &#x27;status&#x27;, &#x27;pm_uptime&#x27;, &#x27;created_at&#x27;, &#x27;unstable_restarts&#x27;, &#x27;restart_time&#x27;, &#x27;axm_actions
+&#x27;, &#x27;pmx_module&#x27;, &#x27;command&#x27;, &#x27;watch&#x27;, &#x27;versioning&#x27;, &#x27;vizion_runing&#x27;, &#x27;MODULE_DEBUG&#x27;, &#x27;pmx&#x27;, &#x27;axm_options&#x27;, &#x27;created_at&#x27;, &#x27;watch&#x27;, &#x27;
+vizion&#x27;, &#x27;axm_dynamic&#x27;, &#x27;axm_monitor&#x27;, &#x27;instances&#x27;, &#x27;automation&#x27;, &#x27;autorestart&#x27;, &#x27;node_args&#x27;, &#x27;unstable_restart&#x27;, &#x27;treekill&#x27;, &#x27;exit_code
+&#x27;];
 
   var keys = Object.keys(add);
   var i = keys.length;
@@ -3889,9 +3890,9 @@ app.env = [{}, env, app.env || {}].reduce(function(e1, e2){
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.serialize" id="apidoc.element.pm2.Common.serialize">
         function <span class="apidocSignatureSpan">pm2.Common.</span>serialize
@@ -3905,9 +3906,9 @@ app.env = [{}, env, app.env || {}].reduce(function(e1, e2){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Common.verifyConfs" id="apidoc.element.pm2.Common.verifyConfs">
         function <span class="apidocSignatureSpan">pm2.Common.</span>verifyConfs
@@ -3960,16 +3961,16 @@ app.env = [{}, env, app.env || {}].reduce(function(e1, e2){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
-    
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Configuration" id="apidoc.module.pm2.Configuration">module pm2.Configuration</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.get" id="apidoc.element.pm2.Configuration.get">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>get
@@ -3996,9 +3997,9 @@ app.env = [{}, env, app.env || {}].reduce(function(e1, e2){
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.getAll" id="apidoc.element.pm2.Configuration.getAll">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>getAll
@@ -4030,9 +4031,9 @@ climb.some(function(val) {
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.getAllSync" id="apidoc.element.pm2.Configuration.getAllSync">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>getAllSync
@@ -4066,9 +4067,9 @@ var climb = splitKey(key);
 climb.some(function(val) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.getSync" id="apidoc.element.pm2.Configuration.getSync">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>getSync
@@ -4099,9 +4100,9 @@ climb.some(function(val) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.multiset" id="apidoc.element.pm2.Configuration.multiset">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>multiset
@@ -4122,9 +4123,9 @@ climb.some(function(val) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.set" id="apidoc.element.pm2.Configuration.set">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>set
@@ -4192,9 +4193,9 @@ Configuration.getAll(function(err, data) {
   var climb = splitKey(key);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.setSync" id="apidoc.element.pm2.Configuration.setSync">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>setSync
@@ -4253,9 +4254,9 @@ Configuration.getAll(function(err, data) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.unset" id="apidoc.element.pm2.Configuration.unset">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>unset
@@ -4309,9 +4310,9 @@ Configuration.getAll(function(err, data) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Configuration.unsetSync" id="apidoc.element.pm2.Configuration.unsetSync">
         function <span class="apidocSignatureSpan">pm2.Configuration.</span>unsetSync
@@ -4365,14 +4366,14 @@ Configuration.getAll(function(err, data) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Daemon" id="apidoc.module.pm2.Daemon">module pm2.Daemon</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.Daemon" id="apidoc.element.pm2.Daemon.Daemon">
         function <span class="apidocSignatureSpan">pm2.</span>Daemon
@@ -4393,14 +4394,14 @@ Configuration.getAll(function(err, data) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Daemon.prototype" id="apidoc.module.pm2.Daemon.prototype">module pm2.Daemon.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.close" id="apidoc.element.pm2.Daemon.prototype.close">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>close
@@ -4463,9 +4464,9 @@ client.sock.once(&#x27;reconnect attempt&#x27;, function() {
 client.sock.once(&#x27;connect&#x27;, function() {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.gracefullExit" id="apidoc.element.pm2.Daemon.prototype.gracefullExit">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>gracefullExit
@@ -4499,9 +4500,9 @@ client.sock.once(&#x27;connect&#x27;, function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.handleSignals" id="apidoc.element.pm2.Daemon.prototype.handleSignals">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>handleSignals
@@ -4538,9 +4539,9 @@ this.pub    = axon.socket(&#x27;pub-emitter&#x27;);
 this.pub_socket = this.pub.bind(this.pub_socket_file);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.innerStart" id="apidoc.element.pm2.Daemon.prototype.innerStart">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>innerStart
@@ -4708,9 +4709,9 @@ daemon.<span class="apidocCodeKeywordSpan">innerStart</span>(function() {
   });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.sendReady" id="apidoc.element.pm2.Daemon.prototype.sendReady">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>sendReady
@@ -4753,9 +4754,9 @@ this.pub_socket.once(&#x27;bind&#x27;, function() {
 this.rep    = axon.socket(&#x27;rep&#x27;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.start" id="apidoc.element.pm2.Daemon.prototype.start">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>start
@@ -4812,9 +4813,9 @@ if (!this.client || !this.client.call) {
     return self.client.call(method, app_conf, fn);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Daemon.prototype.startLogic" id="apidoc.element.pm2.Daemon.prototype.startLogic">
         function <span class="apidocSignatureSpan">pm2.Daemon.prototype.</span>startLogic
@@ -4923,14 +4924,14 @@ God.bus.emit(&#x27;pm2:kill&#x27;, {
   status : &#x27;killed&#x27;,
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.God" id="apidoc.module.pm2.God">module pm2.God</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.checkProcess" id="apidoc.element.pm2.God.checkProcess">
         function <span class="apidocSignatureSpan">pm2.God.</span>checkProcess
@@ -4952,9 +4953,9 @@ God.bus.emit(&#x27;pm2:kill&#x27;, {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.deleteProcessId" id="apidoc.element.pm2.God.deleteProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>deleteProcessId
@@ -4992,9 +4993,9 @@ async.eachLimit(processes, 1, function(proc, next) {
   } catch(e) {}
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.dumpProcessList" id="apidoc.element.pm2.God.dumpProcessList">
         function <span class="apidocSignatureSpan">pm2.God.</span>dumpProcessList
@@ -5055,9 +5056,9 @@ async.eachLimit(processes, 1, function(proc, next) {
     return next();
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.duplicateProcessId" id="apidoc.element.pm2.God.duplicateProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>duplicateProcessId
@@ -5084,9 +5085,9 @@ async.eachLimit(processes, 1, function(proc, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.executeApp" id="apidoc.element.pm2.God.executeApp">
         function <span class="apidocSignatureSpan">pm2.God.</span>executeApp
@@ -5232,9 +5233,9 @@ async.eachLimit(processes, 1, function(proc, next) {
       if (err) return false; ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.finalizeProcedure" id="apidoc.element.pm2.God.finalizeProcedure">
         function <span class="apidocSignatureSpan">pm2.God.</span>finalizeProcedure
@@ -5288,9 +5289,9 @@ async.eachLimit(processes, 1, function(proc, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.findByName" id="apidoc.element.pm2.God.findByName">
         function <span class="apidocSignatureSpan">pm2.God.</span>findByName
@@ -5321,9 +5322,9 @@ async.eachLimit(processes, 1, function(proc, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.findProcessById" id="apidoc.element.pm2.God.findProcessById">
         function <span class="apidocSignatureSpan">pm2.God.</span>findProcessById
@@ -5336,9 +5337,9 @@ async.eachLimit(processes, 1, function(proc, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.forceGc" id="apidoc.element.pm2.God.forceGc">
         function <span class="apidocSignatureSpan">pm2.God.</span>forceGc
@@ -5359,9 +5360,9 @@ async.eachLimit(processes, 1, function(proc, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.forkMode" id="apidoc.element.pm2.God.forkMode">
         function <span class="apidocSignatureSpan">pm2.God.</span>forkMode
@@ -5506,9 +5507,9 @@ async.eachLimit(processes, 1, function(proc, next) {
         process : { ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getFormatedProcess" id="apidoc.element.pm2.God.getFormatedProcess">
         function <span class="apidocSignatureSpan">pm2.God.</span>getFormatedProcess
@@ -5528,9 +5529,9 @@ async.eachLimit(processes, 1, function(proc, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getFormatedProcesses" id="apidoc.element.pm2.God.getFormatedProcesses">
         function <span class="apidocSignatureSpan">pm2.God.</span>getFormatedProcesses
@@ -5577,9 +5578,9 @@ async.eachLimit(processes, 1, function(proc, next) {
   return false;
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getMonitorData" id="apidoc.element.pm2.God.getMonitorData">
         function <span class="apidocSignatureSpan">pm2.God.</span>getMonitorData
@@ -5657,9 +5658,9 @@ async.eachLimit(data, 1, function(proc_key, next) {
   if (!proc_key ||
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getNewId" id="apidoc.element.pm2.God.getNewId">
         function <span class="apidocSignatureSpan">pm2.God.</span>getNewId
@@ -5672,9 +5673,9 @@ async.eachLimit(data, 1, function(proc_key, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getProcesses" id="apidoc.element.pm2.God.getProcesses">
         function <span class="apidocSignatureSpan">pm2.God.</span>getProcesses
@@ -5687,9 +5688,9 @@ async.eachLimit(data, 1, function(proc_key, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getSystemData" id="apidoc.element.pm2.God.getSystemData">
         function <span class="apidocSignatureSpan">pm2.God.</span>getSystemData
@@ -5717,9 +5718,9 @@ async.eachLimit(data, 1, function(proc_key, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.getVersion" id="apidoc.element.pm2.God.getVersion">
         function <span class="apidocSignatureSpan">pm2.God.</span>getVersion
@@ -5734,9 +5735,9 @@ async.eachLimit(data, 1, function(proc_key, next) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.handleExit" id="apidoc.element.pm2.God.handleExit">
         function <span class="apidocSignatureSpan">pm2.God.</span>handleExit
@@ -5745,7 +5746,7 @@ async.eachLimit(data, 1, function(proc_key, next) {
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function handleExit(clu, exit_code, kill_signal) {
-  console.log(&#x27;App [%s] with id [%s] and pid [%s], exited with code [%s] via signal [%s]&#x27;, clu.pm2_env.name, clu.pm2_env.pm_id, \
+  console.log(&#x27;App [%s] with id [%s] and pid [%s], exited with code [%s] via signal [%s]&#x27;, clu.pm2_env.name, clu.pm2_env.pm_id,
 clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 
   var proc = this.clusters_db[clu.pm2_env.pm_id];
@@ -5845,9 +5846,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.killProcess" id="apidoc.element.pm2.God.killProcess">
         function <span class="apidocSignatureSpan">pm2.God.</span>killProcess
@@ -5876,9 +5877,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.logAndGenerateError" id="apidoc.element.pm2.God.logAndGenerateError">
         function <span class="apidocSignatureSpan">pm2.God.</span>logAndGenerateError
@@ -5898,9 +5899,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.msgProcess" id="apidoc.element.pm2.God.msgProcess">
         function <span class="apidocSignatureSpan">pm2.God.</span>msgProcess
@@ -5985,9 +5986,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.nodeApp" id="apidoc.element.pm2.God.nodeApp">
         function <span class="apidocSignatureSpan">pm2.God.</span>nodeApp
@@ -6068,9 +6069,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.notify" id="apidoc.element.pm2.God.notify">
         function <span class="apidocSignatureSpan">pm2.God.</span>notify
@@ -6088,9 +6089,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.notifyByProcessId" id="apidoc.element.pm2.God.notifyByProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>notifyByProcessId
@@ -6117,9 +6118,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.notifyKillPM2" id="apidoc.element.pm2.God.notifyKillPM2">
         function <span class="apidocSignatureSpan">pm2.God.</span>notifyKillPM2
@@ -6132,9 +6133,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.ping" id="apidoc.element.pm2.God.ping">
         function <span class="apidocSignatureSpan">pm2.God.</span>ping
@@ -6147,9 +6148,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.prepare" id="apidoc.element.pm2.God.prepare">
         function <span class="apidocSignatureSpan">pm2.God.</span>prepare
@@ -6201,9 +6202,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.processIsDead" id="apidoc.element.pm2.God.processIsDead">
         function <span class="apidocSignatureSpan">pm2.God.</span>processIsDead
@@ -6257,9 +6258,9 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.reloadLogs" id="apidoc.element.pm2.God.reloadLogs">
         function <span class="apidocSignatureSpan">pm2.God.</span>reloadLogs
@@ -6312,9 +6313,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
   cb(null, {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.reloadProcessId" id="apidoc.element.pm2.God.reloadProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>reloadProcessId
@@ -6345,9 +6346,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.resetMetaProcessId" id="apidoc.element.pm2.God.resetMetaProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>resetMetaProcessId
@@ -6370,9 +6371,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.resetState" id="apidoc.element.pm2.God.resetState">
         function <span class="apidocSignatureSpan">pm2.God.</span>resetState
@@ -6386,9 +6387,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.restartProcessId" id="apidoc.element.pm2.God.restartProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>restartProcessId
@@ -6436,9 +6437,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.restartProcessName" id="apidoc.element.pm2.God.restartProcessName">
         function <span class="apidocSignatureSpan">pm2.God.</span>restartProcessName
@@ -6486,9 +6487,9 @@ if (err) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.sendDataToProcessId" id="apidoc.element.pm2.God.sendDataToProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>sendDataToProcessId
@@ -6527,9 +6528,9 @@ if (err) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.sendSignalToProcessId" id="apidoc.element.pm2.God.sendSignalToProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>sendSignalToProcessId
@@ -6557,9 +6558,9 @@ if (err) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.sendSignalToProcessName" id="apidoc.element.pm2.God.sendSignalToProcessName">
         function <span class="apidocSignatureSpan">pm2.God.</span>sendSignalToProcessName
@@ -6591,9 +6592,9 @@ if (err) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.softReloadProcessId" id="apidoc.element.pm2.God.softReloadProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>softReloadProcessId
@@ -6629,8 +6630,8 @@ if (proc_key.monit.memory !== undefined &#x26;&#x26;
     proc.pm2_env.max_memory_restart &#x3c; proc_key.monit.memory &#x26;&#x26;
     proc.pm2_env.axm_options &#x26;&#x26;
     proc.pm2_env.axm_options.pid === undefined) {
-  console.log(&#x27;[PM2][WORKER] Process %s restarted because it exceeds --max-memory-restart value (current_memory=%s max_memo\
-ry_limit=%s [octets])&#x27;, proc.pm2_env.pm_id, proc_key.monit.memory, proc.pm2_env.max_memory_restart);
+  console.log(&#x27;[PM2][WORKER] Process %s restarted because it exceeds --max-memory-restart value (current_memory=%s max_memory_limit
+=%s [octets])&#x27;, proc.pm2_env.pm_id, proc_key.monit.memory, proc.pm2_env.max_memory_restart);
   God.<span class="apidocCodeKeywordSpan">softReloadProcessId</span>({
     id : proc.pm2_env.pm_id
   }, function(err, data) {
@@ -6641,9 +6642,9 @@ ry_limit=%s [octets])&#x27;, proc.pm2_env.pm_id, proc_key.monit.memory, proc.pm2
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.startProcessId" id="apidoc.element.pm2.God.startProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>startProcessId
@@ -6669,9 +6670,9 @@ ry_limit=%s [octets])&#x27;, proc.pm2_env.pm_id, proc_key.monit.memory, proc.pm2
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.startWatch" id="apidoc.element.pm2.God.startWatch">
         function <span class="apidocSignatureSpan">pm2.God.</span>startWatch
@@ -6701,9 +6702,9 @@ ry_limit=%s [octets])&#x27;, proc.pm2_env.pm_id, proc_key.monit.memory, proc.pm2
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.stopProcessId" id="apidoc.element.pm2.God.stopProcessId">
         function <span class="apidocSignatureSpan">pm2.God.</span>stopProcessId
@@ -6768,9 +6769,9 @@ ry_limit=%s [octets])&#x27;, proc.pm2_env.pm_id, proc_key.monit.memory, proc.pm2
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.stopWatch" id="apidoc.element.pm2.God.stopWatch">
         function <span class="apidocSignatureSpan">pm2.God.</span>stopWatch
@@ -6822,9 +6823,9 @@ else if (method.indexOf(&#x27;delete&#x27;) !== -1) {
 else if (method.indexOf(&#x27;kill&#x27;) !== -1) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.God.toggleWatch" id="apidoc.element.pm2.God.toggleWatch">
         function <span class="apidocSignatureSpan">pm2.God.</span>toggleWatch
@@ -6870,24 +6871,24 @@ if (!this.client || !this.client.call) {
         return fn(error);
 ...</pre></li>
     </ul>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Satan" id="apidoc.module.pm2.Satan">module pm2.Satan</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.disconnectBus" id="apidoc.element.pm2.Satan.disconnectBus">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>disconnectBus
@@ -6903,9 +6904,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.disconnectRPC" id="apidoc.element.pm2.Satan.disconnectRPC">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>disconnectRPC
@@ -6971,9 +6972,9 @@ process.once(&#x27;SIGQUIT&#x27;, function() {
   debug(&#x27;Received SIGQUIT&#x27;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.executeRemote" id="apidoc.element.pm2.Satan.executeRemote">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>executeRemote
@@ -7030,9 +7031,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.getExposedMethods" id="apidoc.element.pm2.Satan.getExposedMethods">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>getExposedMethods
@@ -7045,9 +7046,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.killDaemon" id="apidoc.element.pm2.Satan.killDaemon">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>killDaemon
@@ -7080,9 +7081,9 @@ this.<span class="apidocCodeKeywordSpan">executeRemote</span>(&#x27;notifyByProc
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.launchBus" id="apidoc.element.pm2.Satan.launchBus">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>launchBus
@@ -7117,9 +7118,9 @@ setTimeout(function() {
   });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.launchDaemon" id="apidoc.element.pm2.Satan.launchDaemon">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>launchDaemon
@@ -7212,9 +7213,9 @@ that.<span class="apidocCodeKeywordSpan">launchDaemon</span>(function(err, child
     return cb(null, {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.launchRPC" id="apidoc.element.pm2.Satan.launchRPC">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>launchRPC
@@ -7255,9 +7256,9 @@ this.pingDaemon(function(daemonAlive) {
       });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.notifyGod" id="apidoc.element.pm2.Satan.notifyGod">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>notifyGod
@@ -7277,9 +7278,9 @@ this.pingDaemon(function(daemonAlive) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.pingDaemon" id="apidoc.element.pm2.Satan.pingDaemon">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>pingDaemon
@@ -7329,9 +7330,9 @@ this.<span class="apidocCodeKeywordSpan">pingDaemon</span>(function(daemonAlive)
         pub_socket_file  : that.pub_socket_file,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.printOut" id="apidoc.element.pm2.Satan.printOut">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>printOut
@@ -7361,9 +7362,9 @@ that.launchDaemon(function(err, child) {
       pm2_home         : that.pm2_home
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.processStateHandler" id="apidoc.element.pm2.Satan.processStateHandler">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>processStateHandler
@@ -7436,9 +7437,9 @@ function sendReady() {
         online      : true,
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.remoteWrapper" id="apidoc.element.pm2.Satan.remoteWrapper">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>remoteWrapper
@@ -7601,9 +7602,9 @@ if (noDaemonMode) {
 Satan.printOut(cst.PREFIX_MSG + &#x27;Spawning PM2 daemon&#x27;);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.restartWatch" id="apidoc.element.pm2.Satan.restartWatch">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>restartWatch
@@ -7636,9 +7637,9 @@ if (!Satan.client || !Satan.client.call) {
 }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.start" id="apidoc.element.pm2.Satan.start">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>start
@@ -7702,9 +7703,9 @@ if (!this.client || !this.client.call) {
     return self.client.call(method, app_conf, fn);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Satan.stopWatch" id="apidoc.element.pm2.Satan.stopWatch">
         function <span class="apidocSignatureSpan">pm2.Satan.</span>stopWatch
@@ -7737,14 +7738,14 @@ else if (method.indexOf(&#x27;delete&#x27;) !== -1) {
 else if (method.indexOf(&#x27;kill&#x27;) !== -1) {
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.Utility" id="apidoc.module.pm2.Utility">module pm2.Utility</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.clone" id="apidoc.element.pm2.Utility.clone">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>clone
@@ -7764,7 +7765,7 @@ else if (method.indexOf(&#x27;kill&#x27;) !== -1) {
       God.clusters_db[msg.process.pm_id].pm2_env.name = msg.data.name;
 
     Object.keys(msg.data).forEach(function(conf_key) {
-      God.clusters_db[msg.process.pm_id].pm2_env.axm_options[conf_key] = Utility.<span class="apidocCodeKeywordSpan">clone</span\
+      God.clusters_db[msg.process.pm_id].pm2_env.axm_options[conf_key] = Utility.<span class="apidocCodeKeywordSpan">clone</span
 >(msg.data[conf_key]);
     });
   } catch(e) {
@@ -7774,9 +7775,9 @@ else if (method.indexOf(&#x27;kill&#x27;) !== -1) {
 });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.extend" id="apidoc.element.pm2.Utility.extend">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>extend
@@ -7812,9 +7813,9 @@ formatCLU : function(process) {
   }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.extendExtraConfig" id="apidoc.element.pm2.Utility.extendExtraConfig">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>extendExtraConfig
@@ -7830,9 +7831,9 @@ formatCLU : function(process) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.formatCLU" id="apidoc.element.pm2.Utility.formatCLU">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>formatCLU
@@ -7868,9 +7869,9 @@ God.notifyByProcessId = function(opts, cb) {
   var proc = God.clusters_db[opts.id];
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.getDate" id="apidoc.element.pm2.Utility.getDate">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>getDate
@@ -7899,9 +7900,9 @@ God.notifyByProcessId = function(opts, cb) {
   if (!proc) { return cb(new Error(&#x27;process id doesnt exists&#x27;)); }
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.overrideConsole" id="apidoc.element.pm2.Utility.overrideConsole">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>overrideConsole
@@ -7947,9 +7948,9 @@ God.notifyByProcessId = function(opts, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.packageNameToModuleName" id="apidoc.element.pm2.Utility.packageNameToModuleName">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>packageNameToModuleName
@@ -7968,9 +7969,9 @@ God.notifyByProcessId = function(opts, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.startLogging" id="apidoc.element.pm2.Utility.startLogging">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>startLogging
@@ -8038,9 +8039,9 @@ God.notifyByProcessId = function(opts, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.Utility.whichFileExists" id="apidoc.element.pm2.Utility.whichFileExists">
         function <span class="apidocSignatureSpan">pm2.Utility.</span>whichFileExists
@@ -8064,14 +8065,14 @@ God.notifyByProcessId = function(opts, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.completion" id="apidoc.module.pm2.completion">module pm2.completion</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.completion.complete" id="apidoc.element.pm2.completion.complete">
         function <span class="apidocSignatureSpan">pm2.completion.</span>complete
@@ -8122,7 +8123,7 @@ God.notifyByProcessId = function(opts, cb) {
       // Really, one should not be tossing away EPIPE errors, or any
       // errors, so casually.  But, without this, `. &#x3c;(npm completion)`
       // can never ever work on OS X.
-      //      -- isaacs 
+      //      -- isaacs
       // https://github.com/isaacs/npm/blob/master/lib/completion.js#L162
       if (er.errno === &#x22;EPIPE&#x22;) er = null
       cb(er, null, content);
@@ -8147,9 +8148,9 @@ God.notifyByProcessId = function(opts, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.completion.isComplete" id="apidoc.element.pm2.completion.isComplete">
         function <span class="apidocSignatureSpan">pm2.completion.</span>isComplete
@@ -8163,9 +8164,9 @@ God.notifyByProcessId = function(opts, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.completion.log" id="apidoc.element.pm2.completion.log">
         function <span class="apidocSignatureSpan">pm2.completion.</span>log
@@ -8198,9 +8199,9 @@ daemon.innerStart(function() {
   }, function(err, data, interactor_proc) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.completion.parseOut" id="apidoc.element.pm2.completion.parseOut">
         function <span class="apidocSignatureSpan">pm2.completion.</span>parseOut
@@ -8219,9 +8220,9 @@ daemon.innerStart(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.completion.parseTasks" id="apidoc.element.pm2.completion.parseTasks">
         function <span class="apidocSignatureSpan">pm2.completion.</span>parseTasks
@@ -8237,14 +8238,14 @@ daemon.innerStart(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.custom" id="apidoc.module.pm2.custom">module pm2.custom</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.custom" id="apidoc.element.pm2.custom.custom">
         function <span class="apidocSignatureSpan">pm2.</span>custom
@@ -8341,8 +8342,8 @@ commander.version(pkg.version)
   .usage(&#x27;[cmd] app&#x27;);
 
 var pm2 = new PM2.<span class="apidocCodeKeywordSpan">custom</span>({
-  pm2_home : path.join(os.homedir ? os.homedir() : (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE), &#x27;\
-.pm2-dev&#x27;)
+  pm2_home : path.join(os.homedir ? os.homedir() : (process.env.HOME || process.env.HOMEPATH || process.env.USERPROFILE), &#x27;.
+pm2-dev&#x27;)
 });
 
 pm2.connect(function() {
@@ -8350,14 +8351,14 @@ pm2.connect(function() {
 });
 ...</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.pm2.custom.prototype" id="apidoc.module.pm2.custom.prototype">module pm2.custom.prototype</a></h1>
-    
-    
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._handleAttributeUpdate" id="apidoc.element.pm2.custom.prototype._handleAttributeUpdate">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_handleAttributeUpdate
@@ -8400,9 +8401,9 @@ pm2.connect(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._operate" id="apidoc.element.pm2.custom.prototype._operate">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_operate
@@ -8555,9 +8556,9 @@ pm2.connect(function() {
   // operate using regex ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._pre_interact" id="apidoc.element.pm2.custom.prototype._pre_interact">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_pre_interact
@@ -8645,9 +8646,9 @@ pm2.connect(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._pull" id="apidoc.element.pm2.custom.prototype._pull">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_pull
@@ -8712,9 +8713,9 @@ pm2.connect(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._pullCommitId" id="apidoc.element.pm2.custom.prototype._pullCommitId">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_pullCommitId
@@ -8727,9 +8728,9 @@ pm2.connect(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._startJson" id="apidoc.element.pm2.custom.prototype._startJson">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_startJson
@@ -8878,9 +8879,9 @@ pm2.connect(function() {
       if (apps_name.length &#x3e; 0 &#x26;&#x26; actio ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype._startScript" id="apidoc.element.pm2.custom.prototype._startScript">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>_startScript
@@ -9024,9 +9025,9 @@ pm2.connect(function() {
         res ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.actionFromJson" id="apidoc.element.pm2.custom.prototype.actionFromJson">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>actionFromJson
@@ -9141,9 +9142,9 @@ pm2.connect(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.backward" id="apidoc.element.pm2.custom.prototype.backward">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>backward
@@ -9202,9 +9203,9 @@ pm2.connect(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.close" id="apidoc.element.pm2.custom.prototype.close">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>close
@@ -9240,9 +9241,9 @@ client.sock.once(&#x27;reconnect attempt&#x27;, function() {
 client.sock.once(&#x27;connect&#x27;, function() {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.conf" id="apidoc.element.pm2.custom.prototype.conf">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>conf
@@ -9284,9 +9285,9 @@ client.sock.once(&#x27;connect&#x27;, function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.connect" id="apidoc.element.pm2.custom.prototype.connect">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>connect
@@ -9339,9 +9340,9 @@ client.sock.once(&#x27;connect&#x27;, function() {
 * @method launchRPC
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.dashboard" id="apidoc.element.pm2.custom.prototype.dashboard">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>dashboard
@@ -9393,9 +9394,9 @@ client.sock.once(&#x27;connect&#x27;, function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.deepUpdate" id="apidoc.element.pm2.custom.prototype.deepUpdate">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>deepUpdate
@@ -9418,9 +9419,9 @@ client.sock.once(&#x27;connect&#x27;, function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.delete" id="apidoc.element.pm2.custom.prototype.delete">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>delete
@@ -9464,9 +9465,9 @@ function startProfilingPM2(msg, cb) {
   if (profiler == null) {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.deleteModule" id="apidoc.element.pm2.custom.prototype.deleteModule">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>deleteModule
@@ -9503,9 +9504,9 @@ function startProfilingPM2(msg, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.deploy" id="apidoc.element.pm2.custom.prototype.deploy">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>deploy
@@ -9573,9 +9574,9 @@ function startProfilingPM2(msg, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.describe" id="apidoc.element.pm2.custom.prototype.describe">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>describe
@@ -9617,9 +9618,9 @@ function startProfilingPM2(msg, cb) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.destroy" id="apidoc.element.pm2.custom.prototype.destroy">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>destroy
@@ -9678,9 +9679,9 @@ function startProfilingPM2(msg, cb) {
   debug(&#x27;Error while disconnecting RPC PM2&#x27;, e.stack || e);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.disconnect" id="apidoc.element.pm2.custom.prototype.disconnect">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>disconnect
@@ -9716,9 +9717,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
  * it has been already configured before (via pm2 link)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.dockerMode" id="apidoc.element.pm2.custom.prototype.dockerMode">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>dockerMode
@@ -9835,9 +9836,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.dump" id="apidoc.element.pm2.custom.prototype.dump">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>dump
@@ -9891,9 +9892,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.exitCli" id="apidoc.element.pm2.custom.prototype.exitCli">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>exitCli
@@ -9942,9 +9943,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.flush" id="apidoc.element.pm2.custom.prototype.flush">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>flush
@@ -9982,9 +9983,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.forward" id="apidoc.element.pm2.custom.prototype.forward">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>forward
@@ -10043,9 +10044,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.generateDockerfile" id="apidoc.element.pm2.custom.prototype.generateDockerfile">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>generateDockerfile
@@ -10073,9 +10074,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.generateModuleSample" id="apidoc.element.pm2.custom.prototype.generateModuleSample">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>generateModuleSample
@@ -10094,9 +10095,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.generateSample" id="apidoc.element.pm2.custom.prototype.generateSample">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>generateSample
@@ -10129,9 +10130,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.get" id="apidoc.element.pm2.custom.prototype.get">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>get
@@ -10173,8 +10174,7 @@ if (opts &#x26;&#x26; opts.interactor == false)
       key_name    = key.split(&#x27;.&#x27;)[1];
     }
 
-    Common.printOut(&#x27;Value for module &#x27; + chalk.blue(module_name), &#x27;key &#x27; + chalk.blue(key_name) + &#x27;: &#x27; + chalk.bold.green(data)\
-);
+    Common.printOut(&#x27;Value for module &#x27; + chalk.blue(module_name), &#x27;key &#x27; + chalk.blue(key_name) + &#x27;: &#x27; + chalk.bold.green(data));
 
 
     return cb ? cb(null, {success:true}) : that.exitCli(cst.SUCCESS_EXIT);
@@ -10182,9 +10182,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.getProcessIdByName" id="apidoc.element.pm2.custom.prototype.getProcessIdByName">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>getProcessIdByName
@@ -10206,9 +10206,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.getVersion" id="apidoc.element.pm2.custom.prototype.getVersion">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>getVersion
@@ -10225,9 +10225,9 @@ if (opts &#x26;&#x26; opts.interactor == false)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.gracefulReload" id="apidoc.element.pm2.custom.prototype.gracefulReload">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>gracefulReload
@@ -10244,7 +10244,7 @@ if (opts &#x26;&#x26; opts.interactor == false)
   }
 
   //Common.printOut(conf.PREFIX_MSG_WARNING + chalk.bold.yellow(&#x27;Warning gracefulReload will be soon deprecated&#x27;));
-  //Common.printOut(conf.PREFIX_MSG_WARNING + chalk.bold.yellow(&#x27;Use http://pm2.keymetrics.io/docs/usage/signals-clean-restart/ \
+  //Common.printOut(conf.PREFIX_MSG_WARNING + chalk.bold.yellow(&#x27;Use http://pm2.keymetrics.io/docs/usage/signals-clean-restart/
 instead&#x27;));
 
   if (Common.isConfigFile(process_name))
@@ -10257,9 +10257,9 @@ instead&#x27;));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.install" id="apidoc.element.pm2.custom.prototype.install">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>install
@@ -10285,9 +10285,9 @@ instead&#x27;));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.interact" id="apidoc.element.pm2.custom.prototype.interact">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>interact
@@ -10311,9 +10311,9 @@ instead&#x27;));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.interactInfos" id="apidoc.element.pm2.custom.prototype.interactInfos">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>interactInfos
@@ -10330,9 +10330,9 @@ instead&#x27;));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.jlist" id="apidoc.element.pm2.custom.prototype.jlist">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>jlist
@@ -10362,9 +10362,9 @@ instead&#x27;));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.kill" id="apidoc.element.pm2.custom.prototype.kill">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>kill
@@ -10423,9 +10423,9 @@ console.log(&#x27;PM2 successfully stopped&#x27;);
 setTimeout(function() {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.killAllModules" id="apidoc.element.pm2.custom.prototype.killAllModules">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>killAllModules
@@ -10446,9 +10446,9 @@ setTimeout(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.killDaemon" id="apidoc.element.pm2.custom.prototype.killDaemon">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>killDaemon
@@ -10491,9 +10491,9 @@ setTimeout(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.killInteract" id="apidoc.element.pm2.custom.prototype.killInteract">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>killInteract
@@ -10509,9 +10509,9 @@ setTimeout(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.launchBus" id="apidoc.element.pm2.custom.prototype.launchBus">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>launchBus
@@ -10540,9 +10540,9 @@ setTimeout(function() {
   });
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.launchModules" id="apidoc.element.pm2.custom.prototype.launchModules">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>launchModules
@@ -10555,9 +10555,9 @@ setTimeout(function() {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.list" id="apidoc.element.pm2.custom.prototype.list">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>list
@@ -10616,9 +10616,9 @@ apps.forEach(function(app) {
       app.pm2_env.status == cst.LAUNCHING_STATUS)
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.logrotate" id="apidoc.element.pm2.custom.prototype.logrotate">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>logrotate
@@ -10632,8 +10632,8 @@ apps.forEach(function(app) {
   if (process.getuid() != 0) {
     return exec(&#x27;whoami&#x27;, function(err, stdout, stderr) {
       Common.printError(cst.PREFIX_MSG + &#x27;You have to run this command as root. Execute the following command:&#x27;);
-      Common.printError(cst.PREFIX_MSG + chalk.grey(&#x27;      sudo env PATH=$PATH:&#x27; + path.dirname(process.execPath) + &#x27; pm2 logrot\
-ate -u &#x27; + stdout.trim()));
+      Common.printError(cst.PREFIX_MSG + chalk.grey(&#x27;      sudo env PATH=$PATH:&#x27; + path.dirname(process.execPath) + &#x27; pm2 logrotate
+ -u &#x27; + stdout.trim()));
 
       cb ? cb(Common.retErr(&#x27;You have to run this with elevated rights&#x27;)) : that.exitCli(cst.ERROR_EXIT);
     });
@@ -10664,9 +10664,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.monit" id="apidoc.element.pm2.custom.prototype.monit">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>monit
@@ -10702,9 +10702,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.msgProcess" id="apidoc.element.pm2.custom.prototype.msgProcess">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>msgProcess
@@ -10719,9 +10719,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.multiset" id="apidoc.element.pm2.custom.prototype.multiset">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>multiset
@@ -10770,9 +10770,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.ping" id="apidoc.element.pm2.custom.prototype.ping">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>ping
@@ -10794,9 +10794,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.printLogs" id="apidoc.element.pm2.custom.prototype.printLogs">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>printLogs
@@ -10844,7 +10844,7 @@ ate -u &#x27; + stdout.trim()));
       return that.exitCli(cst.SUCCESS_EXIT)
     }
 
-    Common.printOut(chalk.bold.grey(util.format.call(this, &#x27;[TAILING] Tailing last %d lines for [%s] process%s (change the value\
+    Common.printOut(chalk.bold.grey(util.format.call(this, &#x27;[TAILING] Tailing last %d lines for [%s] process%s (change the value
  with --lines option)&#x27;, lines, id, id === &#x27;all&#x27; ? &#x27;es&#x27; : &#x27;&#x27;)));
 
     // Populate the array `files_list` with the paths of all files we need to tail
@@ -10886,9 +10886,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.profilePM2" id="apidoc.element.pm2.custom.prototype.profilePM2">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>profilePM2
@@ -10927,9 +10927,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.publish" id="apidoc.element.pm2.custom.prototype.publish">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>publish
@@ -10948,9 +10948,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.pullAndGracefulReload" id="apidoc.element.pm2.custom.prototype.pullAndGracefulReload">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullAndGracefulReload
@@ -10963,9 +10963,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.pullAndReload" id="apidoc.element.pm2.custom.prototype.pullAndReload">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullAndReload
@@ -10978,9 +10978,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.pullAndRestart" id="apidoc.element.pm2.custom.prototype.pullAndRestart">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullAndRestart
@@ -10993,9 +10993,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.pullCommitId" id="apidoc.element.pm2.custom.prototype.pullCommitId">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>pullCommitId
@@ -11056,9 +11056,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.reload" id="apidoc.element.pm2.custom.prototype.reload">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>reload
@@ -11084,9 +11084,9 @@ ate -u &#x27; + stdout.trim()));
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.reloadLogs" id="apidoc.element.pm2.custom.prototype.reloadLogs">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>reloadLogs
@@ -11125,9 +11125,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
   cb(null, {
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.remote" id="apidoc.element.pm2.custom.prototype.remote">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>remote
@@ -11147,9 +11147,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.remoteV2" id="apidoc.element.pm2.custom.prototype.remoteV2">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>remoteV2
@@ -11168,9 +11168,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.reset" id="apidoc.element.pm2.custom.prototype.reset">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>reset
@@ -11221,9 +11221,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.restart" id="apidoc.element.pm2.custom.prototype.restart">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>restart
@@ -11260,9 +11260,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.resurrect" id="apidoc.element.pm2.custom.prototype.resurrect">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>resurrect
@@ -11329,9 +11329,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.scale" id="apidoc.element.pm2.custom.prototype.scale">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>scale
@@ -11406,9 +11406,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.sendDataToProcessId" id="apidoc.element.pm2.custom.prototype.sendDataToProcessId">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>sendDataToProcessId
@@ -11432,9 +11432,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.sendSignalToProcessId" id="apidoc.element.pm2.custom.prototype.sendSignalToProcessId">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>sendSignalToProcessId
@@ -11459,9 +11459,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.sendSignalToProcessName" id="apidoc.element.pm2.custom.prototype.sendSignalToProcessName">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>sendSignalToProcessName
@@ -11486,9 +11486,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.serve" id="apidoc.element.pm2.custom.prototype.serve">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>serve
@@ -11522,9 +11522,9 @@ if (this.rpc_socket_ready == true &#x26;&#x26; this.pub_socket_ready == true) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.set" id="apidoc.element.pm2.custom.prototype.set">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>set
@@ -11619,9 +11619,9 @@ Configuration.getAll(function(err, data) {
   var climb = splitKey(key);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.snapshotPM2" id="apidoc.element.pm2.custom.prototype.snapshotPM2">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>snapshotPM2
@@ -11647,9 +11647,9 @@ Configuration.getAll(function(err, data) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.speedList" id="apidoc.element.pm2.custom.prototype.speedList">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>speedList
@@ -11679,7 +11679,7 @@ Configuration.getAll(function(err, data) {
       UX.miniDisplay(list);
     else if (!commander.silent) {
       if (that.gl_interact_infos) {
-        Common.printOut(chalk.green.bold(&#x27;●&#x27;) + &#x27; Agent Online | Dashboard Access: &#x27; + chalk.bold(&#x27;https://app.keymetrics.io/#/r\
+        Common.printOut(chalk.green.bold(&#x27;●&#x27;) + &#x27; Agent Online | Dashboard Access: &#x27; + chalk.bold(&#x27;https://app.keymetrics.io/#/r
 /%s&#x27;) + &#x27; | Server name: %s&#x27;, that.gl_interact_infos.public_key, that.gl_interact_infos.machine_name);
       }
       UX.dispAsTable(list, that.gl_interact_infos);
@@ -11702,9 +11702,9 @@ Configuration.getAll(function(err, data) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.start" id="apidoc.element.pm2.custom.prototype.start">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>start
@@ -11748,9 +11748,9 @@ if (!this.client || !this.client.call) {
     return self.client.call(method, app_conf, fn);
 ...</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.startup" id="apidoc.element.pm2.custom.prototype.startup">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>startup
@@ -11897,9 +11897,9 @@ if (!this.client || !this.client.call) {
   Common.printOut(cst. ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.stop" id="apidoc.element.pm2.custom.prototype.stop">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>stop
@@ -11928,9 +11928,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.streamLogs" id="apidoc.element.pm2.custom.prototype.streamLogs">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>streamLogs
@@ -11977,7 +11977,7 @@ if (!this.client || !this.client.call) {
     if (lines === 0 || raw)
       return Log.stream(that.Client, id, raw, timestamp, exclusive);
 
-    Common.printOut(chalk.bold.grey(util.format.call(this, &#x27;[TAILING] Tailing last %d lines for [%s] process%s (change the value\
+    Common.printOut(chalk.bold.grey(util.format.call(this, &#x27;[TAILING] Tailing last %d lines for [%s] process%s (change the value
  with --lines option)&#x27;, lines, id, id === &#x27;all&#x27; ? &#x27;es&#x27; : &#x27;&#x27;)));
 
     // Populate the array `files_list` with the paths of all files we need to tail
@@ -12019,9 +12019,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.trigger" id="apidoc.element.pm2.custom.prototype.trigger">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>trigger
@@ -12072,9 +12072,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.uninstall" id="apidoc.element.pm2.custom.prototype.uninstall">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>uninstall
@@ -12093,9 +12093,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.uninstallStartup" id="apidoc.element.pm2.custom.prototype.uninstallStartup">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>uninstallStartup
@@ -12200,9 +12200,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.unset" id="apidoc.element.pm2.custom.prototype.unset">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>unset
@@ -12225,9 +12225,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.update" id="apidoc.element.pm2.custom.prototype.update">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>update
@@ -12267,9 +12267,9 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
-    
+
+
+
     <h2>
         <a href="#apidoc.element.pm2.custom.prototype.web" id="apidoc.element.pm2.custom.prototype.web">
         function <span class="apidocSignatureSpan">pm2.custom.prototype.</span>web
@@ -12305,8 +12305,8 @@ if (!this.client || !this.client.call) {
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
-    
-    
+
+
 </div>
 
 <div class="apidocFooterDiv">
