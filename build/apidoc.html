@@ -51,7 +51,7 @@
 
         href="http://pm2.keymetrics.io/"
 
-    >pm2 (v2.4.2)</a>
+    >pm2 (v2.4.4)</a>
 </h1>
 <h4>Production process manager for Node.JS applications with a built-in load balancer.</h4>
 <div class="apidocSectionDiv"><a
@@ -2988,7 +2988,12 @@ setTimeout(function() {
 
   Common.printOut(that.conf.PREFIX_MSG + &#x27;Spawning PM2 daemon with pm2_home=&#x27; + this.pm2_home);
 
-  var child = require(&#x27;child_process&#x27;).spawn(process.execPath || &#x27;node&#x27;, node_args, {
+  var interpreter = &#x27;node&#x27;;
+
+  if (shelljs.which(&#x27;node&#x27;) == null)
+    interpreter = process.execPath;
+
+  var child = require(&#x27;child_process&#x27;).spawn(interpreter, node_args, {
     detached   : true,
     cwd        : that.conf.cwd || process.cwd(),
     env        : util._extend({
@@ -3433,21 +3438,21 @@ if (!this.client || !this.client.call) {
   return destination;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+ * @param {Mixed} env
+ * @param {Function} cb
+ * @return Literal
+ */
+God.executeApp = function executeApp(env, cb) {
+var env_copy = Utility.clone(env);
 
-var Utility = module.exports = {
-getDate : function() {
-  return Date.now();
-},
-extendExtraConfig : function(proc, opts) {
-  if (opts.env &#x26;&#x26; opts.env.current_conf) {
-    Utility.<span class="apidocCodeKeywordSpan">extend</span>(proc.pm2_env, opts.env.current_conf);
-    delete opts.env.current_conf;
-  }
-},
-formatCLU : function(process) {
-  if (!process.pm2_env) {
-    return process;
-  }
+Utility.<span class="apidocCodeKeywordSpan">extend</span>(env_copy, env_copy.env);
+
+env_copy[&#x27;status&#x27;]         = cst.LAUNCHING_STATUS;
+env_copy[&#x27;pm_uptime&#x27;]      = Date.now();
+env_copy[&#x27;axm_actions&#x27;]    = [];
+env_copy[&#x27;axm_monitor&#x27;]    = {};
+env_copy[&#x27;axm_options&#x27;]    = {};
+env_copy[&#x27;axm_dynamic&#x27;]    = {};
 ...</pre></li>
     </ul>
 
@@ -4776,7 +4781,7 @@ this.rep    = axon.socket(&#x27;rep&#x27;);
     console.error(err.stack);
     fmt.sep();
 
-    console.error(&#x27;[PM2][%s] Resurrecting PM2&#x27;);
+    console.error(&#x27;[PM2] Resurrecting PM2&#x27;);
 
 		var path = cst.IS_WINDOWS ? process.cwd() + &#x27;/bin/pm2&#x27; : process.env[&#x27;_&#x27;];
     var fork_new_pm2 = require(&#x27;child_process&#x27;).spawn(&#x27;node&#x27;, [path, &#x27;update&#x27;], {
@@ -5231,7 +5236,23 @@ async.eachLimit(processes, 1, function(proc, next) {
     God.forkMode(env_copy, function forkMode(err, clu) {
       if (cb &#x26;&#x26; err) return cb(err);
       if (err) return false; ...</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  if (!stopping &#x26;&#x26; !overlimit) {
+    //make this property unenumerable
+    Object.defineProperty(proc.pm2_env, &#x27;restart_task&#x27;, {configurable: true, writable: true});
+    proc.pm2_env.restart_task = setTimeout(function() {
+      proc.pm2_env.restart_time += 1;
+      God.<span class="apidocCodeKeywordSpan">executeApp</span>(proc.pm2_env);
+    }, restart_delay);
+  }
+
+  return false;
+};
+
+/**
+...</pre></li>
     </ul>
 
 
@@ -5287,7 +5308,23 @@ async.eachLimit(processes, 1, function(proc, next) {
     return false;
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    exit(exitCode, signalCode);
+  });
+};
+
+/** Callback when application is launched */
+var readyCb = function ready(proc) {
+    if (proc.pm2_env.vizion !== false &#x26;&#x26; proc.pm2_env.vizion !== &#x22;false&#x22;)
+      God.<span class="apidocCodeKeywordSpan">finalizeProcedure</span>(proc);
+    else
+      God.notify(&#x27;online&#x27;, proc);
+
+    proc.pm2_env.status = cst.ONLINE_STATUS;
+    console.log(&#x27;App name:%s id:%s online&#x27;, proc.pm2_env.name, proc.pm2_env.pm_id);
+    if (cb) cb(null, proc);
+}
+...</pre></li>
     </ul>
 
 
@@ -5505,7 +5542,23 @@ async.eachLimit(processes, 1, function(proc, next) {
 
       God.bus.emit(&#x27;log:out&#x27;, {
         process : { ...</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+    });
+  }
+  else {
+    /**
+     * Fork mode logic
+     */
+    God.<span class="apidocCodeKeywordSpan">forkMode</span>(env_copy, function forkMode(err, clu) {
+if (cb &#x26;&#x26; err) return cb(err);
+if (err) return false;
+
+var old_env = God.clusters_db[clu.pm2_env.pm_id];
+if (old_env) old_env = null;
+
+var proc = God.clusters_db[env_copy.pm_id] = clu;
+...</pre></li>
     </ul>
 
 
@@ -5671,7 +5724,24 @@ async.eachLimit(data, 1, function(proc_key, next) {
     <li>description and source-code<pre class="apidocCodePre">getNewId = function () {
   return God.next_id++;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   * Enter here when it&#x27;s the first time that the process is created
+   * 1 - Assign a new id
+   * 2 - Reset restart time and unstable_restarts
+   * 3 - Assign a log file name depending on the id
+   * 4 - If watch option is set, look for changes
+   */
+  if (env_copy[&#x27;pm_id&#x27;] === undefined) {
+env_copy[&#x27;pm_id&#x27;]             = God.<span class="apidocCodeKeywordSpan">getNewId</span>();
+env_copy[&#x27;restart_time&#x27;]      = 0;
+env_copy[&#x27;unstable_restarts&#x27;] = 0;
+
+// add -pm_id to pid file
+env_copy.pm_pid_path = env_copy.pm_pid_path.replace(/-[0-9]+\.pid$|\.pid$/g, &#x27;-&#x27; + env_copy[&#x27;pm_id&#x27;] + &#x27
+;.pid&#x27;);
+
+// If merge option, dont separate the logs
+...</pre></li>
     </ul>
 
 
@@ -5844,7 +5914,22 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 
   return false;
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  console.error(err.stack || err);
+  clu.pm2_env.status = cst.ERRORED_STATUS;
+  try {
+    clu.destroy &#x26;&#x26; clu.destroy();
+  }
+  catch (e) {
+    console.error(e.stack || e);
+    God.<span class="apidocCodeKeywordSpan">handleExit</span>(clu, cst.ERROR_EXIT);
+  }
+});
+
+clu.once(&#x27;disconnect&#x27;, function() {
+  console.log(&#x27;App name:%s id:%s disconnected&#x27;, clu.pm2_env.name, clu.pm2_env.pm_id);
+});
+...</pre></li>
     </ul>
 
 
@@ -5957,6 +6042,12 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
       if (arr[0] == null) return cb(null, { process_count : sent, success : true });
 
       var id      = arr[0];
+
+      if (!God.clusters_db[id] || !God.clusters_db[id].pm2_env) {
+        arr.shift();
+        return ex(arr);
+      }
+
       var proc_env = God.clusters_db[id].pm2_env;
 
       if (p.basename(proc_env.pm_exec_path) == name || proc_env.name == name) {
@@ -6067,7 +6158,23 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
 
   return cb(null, clu);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (cb) cb(null, proc);
+  }
+
+  if (env_copy.exec_mode === &#x27;cluster_mode&#x27;) {
+    /**
+     * Cluster mode logic (for NodeJS apps)
+     */
+    God.<span class="apidocCodeKeywordSpan">nodeApp</span>(env_copy, function nodeApp(err, clu) {
+if (cb &#x26;&#x26; err) return cb(err);
+if (err) return false;
+
+var old_env = God.clusters_db[clu.pm2_env.pm_id];
+
+if (old_env) {
+  old_env = null;
+...</pre></li>
     </ul>
 
 
@@ -6087,7 +6194,23 @@ clu.process.pid, exit_code, kill_signal || &#x27;SIGINT&#x27;);
     at         : Utility.getDate()
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+/** Callback when application is launched */
+var readyCb = function ready(proc) {
+    if (proc.pm2_env.vizion !== false &#x26;&#x26; proc.pm2_env.vizion !== &#x22;false&#x22;)
+      God.finalizeProcedure(proc);
+    else
+      God.<span class="apidocCodeKeywordSpan">notify</span>(&#x27;online&#x27;, proc);
+
+    proc.pm2_env.status = cst.ONLINE_STATUS;
+    console.log(&#x27;App name:%s id:%s online&#x27;, proc.pm2_env.name, proc.pm2_env.pm_id);
+    if (cb) cb(null, proc);
+}
+
+if (env_copy.exec_mode === &#x27;cluster_mode&#x27;) {
+...</pre></li>
     </ul>
 
 
@@ -7796,21 +7919,21 @@ else if (method.indexOf(&#x27;kill&#x27;) !== -1) {
   return destination;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+ * @param {Mixed} env
+ * @param {Function} cb
+ * @return Literal
+ */
+God.executeApp = function executeApp(env, cb) {
+var env_copy = Utility.clone(env);
 
-var Utility = module.exports = {
-getDate : function() {
-  return Date.now();
-},
-extendExtraConfig : function(proc, opts) {
-  if (opts.env &#x26;&#x26; opts.env.current_conf) {
-    Utility.<span class="apidocCodeKeywordSpan">extend</span>(proc.pm2_env, opts.env.current_conf);
-    delete opts.env.current_conf;
-  }
-},
-formatCLU : function(process) {
-  if (!process.pm2_env) {
-    return process;
-  }
+Utility.<span class="apidocCodeKeywordSpan">extend</span>(env_copy, env_copy.env);
+
+env_copy[&#x27;status&#x27;]         = cst.LAUNCHING_STATUS;
+env_copy[&#x27;pm_uptime&#x27;]      = Date.now();
+env_copy[&#x27;axm_actions&#x27;]    = [];
+env_copy[&#x27;axm_monitor&#x27;]    = {};
+env_copy[&#x27;axm_options&#x27;]    = {};
+env_copy[&#x27;axm_dynamic&#x27;]    = {};
 ...</pre></li>
     </ul>
 
@@ -7946,7 +8069,23 @@ God.notifyByProcessId = function(opts, cb) {
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  bus : new EventEmitter2({
+    wildcard: true,
+    delimiter: &#x27;:&#x27;,
+    maxListeners: 1000
+  })
+};
+
+Utility.<span class="apidocCodeKeywordSpan">overrideConsole</span>(God.bus);
+
+/**
+ * Populate God namespace
+ */
+require(&#x27;./Event.js&#x27;)(God);
+require(&#x27;./God/Methods.js&#x27;)(God);
+require(&#x27;./God/ForkMode.js&#x27;)(God);
+...</pre></li>
     </ul>
 
 
@@ -8755,10 +8894,7 @@ pm2.connect(function() {
   else {
     var data = null;
 
-    var file_path = path.join(that.cwd, file);
-
-    if (file[0] == &#x27;/&#x27;)
-      file_path = file;
+    var file_path = path.isAbsolute(file) ? file : path.join(that.cwd, file);
 
     debug(&#x27;Resolved filepath %s&#x27;, file_path);
 
@@ -8876,7 +9012,7 @@ pm2.connect(function() {
 
     }, function(err) {
       if (err) return cb ? cb(Common.retErr(err)) : that.exitCli(conf.ERROR_EXIT);
-      if (apps_name.length &#x3e; 0 &#x26;&#x26; actio ...</pre></li>
+      if (apps_name.length &#x3e; 0 &#x26;&#x26; action != &#x27;start&#x27;) ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -12058,16 +12194,16 @@ if (!this.client || !this.client.call) {
           return cb ? cb(null, results) : that.exitCli(cst.SUCCESS_EXIT);
       }
     });
-  });
 
-  that.msgProcess(cmd, function(err, data) {
-    if (err) {
-      Common.printError(err);
-      return cb ? cb(Common.retErr(err)) : that.exitCli(cst.ERROR_EXIT);
-    }
-    process_wait_count = data.process_count;
-    Common.printOut(chalk.bold(&#x27;%s processes have received command %s&#x27;),
-                    data.process_count, action_name);
+    that.msgProcess(cmd, function(err, data) {
+      if (err) {
+        Common.printError(err);
+        return cb ? cb(Common.retErr(err)) : that.exitCli(cst.ERROR_EXIT);
+      }
+      process_wait_count = data.process_count;
+      Common.printOut(chalk.bold(&#x27;%s processes have received command %s&#x27;),
+                      data.process_count, action_name);
+    });
   });
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
